@@ -247,6 +247,71 @@ body{background:var(--cream);font-family:'Noto Sans JP',sans-serif;color:var(--n
 
 /* EMPTY */
 .empty-state{text-align:center;padding:40px 20px;color:#aaa;font-size:12px;letter-spacing:2px;}
+
+/* ===== 東京駅ガイド専用スタイル ===== */
+.ts-sub-nav{display:flex;overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--border);background:var(--bg2);margin:0 -16px;padding:0 4px;}
+.ts-sub-nav::-webkit-scrollbar{display:none;}
+.ts-sub-btn{flex:none;padding:9px 14px;border:none;background:none;color:var(--fg2);font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:500;cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:color 0.15s,border-color 0.15s;}
+.ts-sub-btn.active{color:var(--accent);border-bottom-color:var(--accent);font-weight:700;}
+.ts-sub-panel{display:none;padding-top:12px;}
+.ts-sub-panel.active{display:block;}
+.ts-route-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px;margin-bottom:10px;box-shadow:0 1px 4px var(--shadow);cursor:pointer;}
+.ts-route-card-header{display:flex;align-items:flex-start;gap:10px;}
+.ts-route-card-title{font-weight:700;font-size:15px;flex:1;line-height:1.4;}
+.ts-route-card-badge{font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px;white-space:nowrap;flex-shrink:0;}
+.ts-badge-walk{background:var(--accent-light);color:var(--accent);}
+.ts-badge-free{background:#E8F5E9;color:#2E7D32;}
+.ts-badge-paid{background:#FFF3E0;color:#E65100;}
+.ts-route-card-toggle{text-align:right;color:var(--fg3);font-size:12px;margin-top:6px;}
+.ts-route-card-detail{display:none;margin-top:12px;padding-top:12px;border-top:1px solid var(--border);}
+.ts-route-card.open .ts-route-card-detail{display:block;}
+.ts-step-list{list-style:none;margin:0 0 10px;padding:0;display:flex;flex-direction:column;}
+.ts-step-item{display:flex;gap:10px;align-items:flex-start;padding:6px 0;position:relative;}
+.ts-step-item::before{content:'';position:absolute;left:14px;top:28px;bottom:-6px;width:2px;background:var(--border);}
+.ts-step-item:last-child::before{display:none;}
+.ts-step-num{width:28px;height:28px;border-radius:50%;background:var(--accent);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;z-index:1;}
+.ts-step-content{flex:1;min-width:0;}
+.ts-step-text{font-size:14px;line-height:1.5;}
+.ts-step-note{font-size:12px;color:var(--fg3);margin-top:2px;}
+.ts-route-meta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:10px;}
+.ts-meta-chip{font-size:12px;color:var(--fg2);}
+.ts-meta-chip strong{color:var(--fg);font-weight:700;}
+.line-tag{display:inline-block;font-size:11px;font-weight:700;padding:1px 7px;border-radius:4px;color:#fff;margin-right:4px;}
+.line-shinkansen{background:#1B5E8A;}
+.line-yamanote{background:#7CB342;}
+.line-keiyo{background:#E67300;}
+.line-sobu{background:#F5C300;color:#1A1714 !important;}
+.line-marunouchi{background:#D32F2F;}
+.ts-map-btn{display:inline-flex;align-items:center;gap:5px;background:var(--accent);color:#fff;border:none;border-radius:8px;padding:7px 14px;font-family:'Noto Sans JP',sans-serif;font-size:13px;font-weight:700;text-decoration:none;}
+.ts-spot-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 16px;margin-bottom:10px;box-shadow:0 1px 4px var(--shadow);}
+.ts-spot-name{font-weight:700;font-size:15px;margin-bottom:4px;}
+.ts-spot-sub{font-size:12px;color:var(--fg3);margin-bottom:6px;}
+.ts-spot-desc{font-size:13px;color:var(--fg2);line-height:1.6;margin-bottom:8px;}
+.ts-spot-tags{display:flex;gap:6px;flex-wrap:wrap;}
+.ts-spot-tag{font-size:11px;background:var(--accent-light);color:var(--accent);padding:2px 8px;border-radius:20px;font-weight:500;}
+.ts-tip-card{background:var(--accent-light);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;padding:10px 14px;margin-bottom:10px;font-size:13px;color:var(--fg2);line-height:1.6;}
+.ts-tip-card strong{color:var(--fg);}
+.ts-exit-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:16px;}
+.ts-exit-item{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:10px 12px;}
+.ts-exit-name{font-weight:700;font-size:14px;margin-bottom:3px;}
+.ts-exit-dest{color:var(--fg2);font-size:12px;line-height:1.5;}
+.ts-map-link-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:14px 16px;margin-bottom:10px;display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--fg);}
+.ts-map-link-card:hover{background:var(--accent-light);}
+.ts-map-link-icon{font-size:28px;flex-shrink:0;}
+.ts-map-link-text{flex:1;min-width:0;}
+.ts-map-link-title{font-weight:700;font-size:14px;}
+.ts-map-link-sub{font-size:12px;color:var(--fg3);}
+.ts-map-link-arrow{color:var(--fg3);font-size:16px;}
+.ts-alert-badge{display:inline-flex;align-items:center;gap:4px;background:#FFF3E0;color:#E65100;font-size:11px;font-weight:700;padding:2px 8px;border-radius:20px;margin-bottom:8px;}
+.ts-trip-banner{background:var(--accent);color:#fff;border-radius:10px;padding:10px 14px;margin:14px 0 4px;font-size:13px;display:flex;align-items:center;gap:8px;}
+.ts-trip-banner strong{font-size:15px;}
+.ts-section-head{display:flex;align-items:center;gap:8px;margin:20px 0 10px;}
+.ts-section-head h2{font-family:'Noto Serif JP',serif;font-size:16px;font-weight:700;margin:0;}
+.ts-section-icon{font-size:20px;line-height:1;flex-shrink:0;}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .ts-badge-free{background:#1B2E1C;color:#81C784;}:root:not([data-theme="light"]) .ts-badge-paid{background:#2E1A00;color:#FFB74D;}:root:not([data-theme="light"]) .ts-alert-badge{background:#3E2000;color:#FFB74D;}}
+:root[data-theme="dark"] .ts-badge-free{background:#1B2E1C;color:#81C784;}
+:root[data-theme="dark"] .ts-badge-paid{background:#2E1A00;color:#FFB74D;}
+:root[data-theme="dark"] .ts-alert-badge{background:#3E2000;color:#FFB74D;}
 </style>
 </head>
 <body>
@@ -260,6 +325,7 @@ body{background:var(--cream);font-family:'Noto Sans JP',sans-serif;color:var(--n
   <div class="tab active" data-tab="day1">DAY 1</div>
   <div class="tab" data-tab="day2">DAY 2</div>
   <div class="tab" data-tab="day3">DAY 3</div>
+  <div class="tab" data-tab="tokyo">🚉 東京駅</div>
   <div class="tab" data-tab="gourmet">🍴</div>
   <div class="tab" data-tab="info">INFO</div>
 </div>
@@ -271,7 +337,7 @@ body{background:var(--cream);font-family:'Noto Sans JP',sans-serif;color:var(--n
     <div class="day-banner-num">01</div>
     <div class="day-banner-info">
       <div class="day-banner-date">NOV 20, 2026 — FRI</div>
-      <div class="day-banner-theme">横浜到着・みなとみらいへ</div>
+      <div class="day-banner-theme">横浜到着・中華街・山下公園</div>
     </div>
   </div>
   <div class="quick-bar">
@@ -330,6 +396,156 @@ body{background:var(--cream);font-family:'Noto Sans JP',sans-serif;color:var(--n
   </div>
   <div class="timeline" id="timeline-day3"></div>
   <button class="add-btn" onclick="openAddModal('day3')">＋ 予定を追加</button>
+</div>
+
+<!-- TOKYO STATION GUIDE -->
+<div class="day-panel" id="panel-tokyo">
+  <div class="day-banner">
+    <div class="day-banner-num">🚉</div>
+    <div class="day-banner-info">
+      <div class="day-banner-date">DAY 1 着 ／ DAY 3 発</div>
+      <div class="day-banner-theme">東京駅 移動ガイド</div>
+    </div>
+  </div>
+
+  <nav class="ts-sub-nav" id="ts-sub-nav">
+    <button class="ts-sub-btn active" data-tspanel="ts-routes">🚶 移動ルート</button>
+    <button class="ts-sub-btn" data-tspanel="ts-exits">🚪 出口ガイド</button>
+    <button class="ts-sub-btn" data-tspanel="ts-spots">🏛 構内スポット</button>
+    <button class="ts-sub-btn" data-tspanel="ts-tips">💡 ヒント</button>
+  </nav>
+
+  <!-- 移動ルート -->
+  <div class="ts-sub-panel active" id="ts-routes">
+    <div class="ts-trip-banner">
+      <span>🗓</span>
+      <div><strong>この旅での東京駅</strong><br>DAY1 到着（新幹線→横浜）／ DAY3 帰路（つばさ139号 13:00発）</div>
+    </div>
+    <div class="ts-section-head"><span class="ts-section-icon">🚄</span><h2>新幹線ホームから</h2></div>
+    <div class="ts-route-card" onclick="toggleTsCard(this)">
+      <div class="ts-route-card-header">
+        <div class="ts-route-card-title">新幹線ホーム → 横浜（東海道線）</div>
+        <span class="ts-route-card-badge ts-badge-walk">徒歩5分</span>
+      </div>
+      <div class="ts-route-card-toggle">▼ 詳しく見る</div>
+      <div class="ts-route-card-detail">
+        <div class="ts-route-meta">
+          <div class="ts-meta-chip">⏱ <strong>5〜8分</strong></div>
+          <div class="ts-meta-chip">🚶 <strong>乗換のみ</strong></div>
+        </div>
+        <ul class="ts-step-list">
+          <li class="ts-step-item"><div class="ts-step-num">1</div><div class="ts-step-content"><div class="ts-step-text"><strong>新幹線ホーム</strong>を降りて改札方向へ</div><div class="ts-step-note">つばさ132号はホーム21〜22番線が多い</div></div></li>
+          <li class="ts-step-item"><div class="ts-step-num">2</div><div class="ts-step-content"><div class="ts-step-text">在来線<strong>中央乗換口</strong>（改札内）を通過</div><div class="ts-step-note">Suica・ICカードそのまま使えます</div></div></li>
+          <li class="ts-step-item"><div class="ts-step-num">3</div><div class="ts-step-content"><div class="ts-step-text"><span class="line-tag line-keiyo">東海道線</span>のホームへ</div><div class="ts-step-note">8〜10番線。快速・普通で横浜まで約28分</div></div></li>
+          <li class="ts-step-item"><div class="ts-step-num">4</div><div class="ts-step-content"><div class="ts-step-text">横浜駅で下車</div><div class="ts-step-note">運賃：580円（IC: 572円）</div></div></li>
+        </ul>
+        <a href="https://transit.yahoo.co.jp/search/result?from=東京&to=横浜&y=2026&m=11&d=20&hh=11&m2=5&type=1" target="_blank" class="ts-map-btn">🗺 Yahoo乗換案内で確認</a>
+      </div>
+    </div>
+    <div class="ts-route-card" onclick="toggleTsCard(this)">
+      <div class="ts-route-card-header">
+        <div class="ts-route-card-title">錦糸町 → 東京駅（DAY3朝）</div>
+        <span class="ts-route-card-badge ts-badge-walk">約8分</span>
+      </div>
+      <div class="ts-route-card-toggle">▼ 詳しく見る</div>
+      <div class="ts-route-card-detail">
+        <div class="ts-route-meta">
+          <div class="ts-meta-chip">⏱ <strong>約8分</strong></div>
+          <div class="ts-meta-chip">💴 <strong>210円（IC: 209円）</strong></div>
+        </div>
+        <ul class="ts-step-list">
+          <li class="ts-step-item"><div class="ts-step-num">1</div><div class="ts-step-content"><div class="ts-step-text">錦糸町駅から<span class="line-tag line-sobu">総武線（快速）</span>に乗車</div><div class="ts-step-note">東京方面・千葉始発の列車が多い</div></div></li>
+          <li class="ts-step-item"><div class="ts-step-num">2</div><div class="ts-step-content"><div class="ts-step-text"><strong>東京駅</strong>で下車</div><div class="ts-step-note">地下ホーム1〜4番線に到着</div></div></li>
+        </ul>
+        <a href="https://transit.yahoo.co.jp/search/result?from=錦糸町&to=東京&y=2026&m=11&d=22&hh=11&m2=0&type=1" target="_blank" class="ts-map-btn">🗺 Yahoo乗換案内で確認</a>
+      </div>
+    </div>
+    <div class="ts-section-head"><span class="ts-section-icon">🏛</span><h2>帰路（DAY3）の流れ</h2></div>
+    <div class="ts-tip-card"><strong>DAY3の使い方：</strong>チェックアウト後に錦糸町から東京駅へ。荷物をコインロッカーへ預けて丸の内を散策。グランスタでお土産を買ってつばさ139号（13:00発）に乗車。</div>
+    <div class="ts-route-card" onclick="toggleTsCard(this)">
+      <div class="ts-route-card-header">
+        <div class="ts-route-card-title">コインロッカー → 丸の内南口・KITTE</div>
+        <span class="ts-route-card-badge ts-badge-walk">徒歩3分</span>
+      </div>
+      <div class="ts-route-card-toggle">▼ 詳しく見る</div>
+      <div class="ts-route-card-detail">
+        <ul class="ts-step-list">
+          <li class="ts-step-item"><div class="ts-step-num">1</div><div class="ts-step-content"><div class="ts-step-text">荷物を<strong>コインロッカー</strong>に預ける</div><div class="ts-step-note">八重洲地下・丸の内地下など複数箇所。大型600〜700円</div></div></li>
+          <li class="ts-step-item"><div class="ts-step-num">2</div><div class="ts-step-content"><div class="ts-step-text"><strong>丸の内南口</strong>から出る</div><div class="ts-step-note">赤レンガ駅舎の正面口。写真スポット</div></div></li>
+          <li class="ts-step-item"><div class="ts-step-num">3</div><div class="ts-step-content"><div class="ts-step-text">道路を渡り<strong>KITTE</strong>へ</div><div class="ts-step-note">6Fの「KITTEガーデン」から駅舎の絶景撮影</div></div></li>
+        </ul>
+        <a href="https://maps.google.com/?q=KITTE東京" target="_blank" class="ts-map-btn">📍 地図で見る</a>
+      </div>
+    </div>
+    <div class="ts-route-card" onclick="toggleTsCard(this)">
+      <div class="ts-route-card-header">
+        <div class="ts-route-card-title">グランスタ → 新幹線ホーム（帰路）</div>
+        <span class="ts-route-card-badge ts-badge-walk">余裕をもって</span>
+      </div>
+      <div class="ts-route-card-toggle">▼ 詳しく見る</div>
+      <div class="ts-route-card-detail">
+        <div class="ts-alert-badge">⚠ 13:00発 つばさ139号</div>
+        <ul class="ts-step-list">
+          <li class="ts-step-item"><div class="ts-step-num">1</div><div class="ts-step-content"><div class="ts-step-text"><strong>12:30頃</strong>にはグランスタを出発</div><div class="ts-step-note">週末昼は混雑。余裕を持って</div></div></li>
+          <li class="ts-step-item"><div class="ts-step-num">2</div><div class="ts-step-content"><div class="ts-step-text"><strong>新幹線中央乗換口</strong>から入場</div><div class="ts-step-note">丸の内・八重洲どちらの改札からでも入れる</div></div></li>
+          <li class="ts-step-item"><div class="ts-step-num">3</div><div class="ts-step-content"><div class="ts-step-text">つばさ139号 <strong>16号車 3番D席</strong></div><div class="ts-step-note">ホーム番号は乗車票で確認。通常20〜22番線</div></div></li>
+        </ul>
+        <a href="https://transit.yahoo.co.jp/search/result?from=東京&to=山形&y=2026&m=11&d=22&hh=12&m2=30&type=1" target="_blank" class="ts-map-btn">🗺 乗換案内で確認</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 出口ガイド -->
+  <div class="ts-sub-panel" id="ts-exits">
+    <div class="ts-section-head"><span class="ts-section-icon">🚪</span><h2>主な出口と行き先</h2></div>
+    <div class="ts-tip-card">東京駅は<strong>丸の内側（西）</strong>と<strong>八重洲側（東）</strong>に分かれています。目的地によって出口を使い分けましょう。</div>
+    <div class="ts-section-head" style="margin-top:8px;"><h2 style="font-size:14px;">🏛 丸の内側（西口）</h2></div>
+    <div class="ts-exit-grid">
+      <div class="ts-exit-item"><div class="ts-exit-name">丸の内南口</div><div class="ts-exit-dest">赤レンガ駅舎の正面<br>KITTE・三菱一号館<br>📸 写真スポット</div></div>
+      <div class="ts-exit-item"><div class="ts-exit-name">丸の内北口</div><div class="ts-exit-dest">大丸東京<br>丸の内ビル・新丸ビル<br>皇居方面</div></div>
+      <div class="ts-exit-item"><div class="ts-exit-name">丸の内地下南口</div><div class="ts-exit-dest">地下鉄丸ノ内線<br>雨の日に便利</div></div>
+      <div class="ts-exit-item"><div class="ts-exit-name">丸の内地下北口</div><div class="ts-exit-dest">地下鉄丸ノ内線<br>グランスタ経由も可</div></div>
+    </div>
+    <div class="ts-section-head" style="margin-top:4px;"><h2 style="font-size:14px;">🏢 八重洲側（東口）</h2></div>
+    <div class="ts-exit-grid">
+      <div class="ts-exit-item"><div class="ts-exit-name">八重洲北口</div><div class="ts-exit-dest">大丸東京<br>高速バス乗り場</div></div>
+      <div class="ts-exit-item"><div class="ts-exit-name">八重洲南口</div><div class="ts-exit-dest">高速バス乗り場<br>タクシー乗り場</div></div>
+      <div class="ts-exit-item"><div class="ts-exit-name">八重洲地下北口</div><div class="ts-exit-dest">グランスタ・エキュート<br>八重洲地下街</div></div>
+      <div class="ts-exit-item"><div class="ts-exit-name">八重洲地下南口</div><div class="ts-exit-dest">大型コインロッカー多め<br>東京シティエアターミナル</div></div>
+    </div>
+    <div class="ts-section-head"><span class="ts-section-icon">🗺</span><h2>構内図・地図リンク</h2></div>
+    <a href="https://www.jreast.co.jp/estation/stations/1039.html" target="_blank" class="ts-map-link-card" style="border:2px solid var(--accent);">
+      <span class="ts-map-link-icon">📋</span><div class="ts-map-link-text"><div class="ts-map-link-title">JR東日本 公式構内図</div><div class="ts-map-link-sub">ホーム配置・エレベーター・トイレ・コインロッカー位置</div></div><span class="ts-map-link-arrow">›</span>
+    </a>
+    <a href="https://www.tokyoinfo.com/access/map/" target="_blank" class="ts-map-link-card">
+      <span class="ts-map-link-icon">🏢</span><div class="ts-map-link-text"><div class="ts-map-link-title">東京駅周辺マップ（TOKYO INFO）</div><div class="ts-map-link-sub">KITTE・グランスタ・八重洲地下街の位置関係</div></div><span class="ts-map-link-arrow">›</span>
+    </a>
+    <a href="https://maps.google.com/?q=東京駅" target="_blank" class="ts-map-link-card">
+      <span class="ts-map-link-icon">🗺</span><div class="ts-map-link-text"><div class="ts-map-link-title">Googleマップで開く</div><div class="ts-map-link-sub">現在地からのルート・ストリートビューも確認可</div></div><span class="ts-map-link-arrow">›</span>
+    </a>
+  </div>
+
+  <!-- 構内スポット -->
+  <div class="ts-sub-panel" id="ts-spots">
+    <div class="ts-section-head"><span class="ts-section-icon">🛍</span><h2>立ち寄りスポット</h2></div>
+    <div class="ts-spot-card"><div class="ts-spot-name">KITTEガーデン（屋上）</div><div class="ts-spot-sub">千代田区丸の内2-7-2 ／ 無料</div><div class="ts-spot-desc">旧東京中央郵便局を改装した商業施設「KITTE」の屋上庭園。丸の内の赤レンガ駅舎を真正面に見渡せる絶景スポット。新幹線の発着も見える。</div><div class="ts-spot-tags"><span class="ts-spot-tag">📸 撮影スポット</span><span class="ts-spot-tag">🆓 無料</span><span class="ts-spot-tag">🏛 駅舎ビュー</span></div></div>
+    <div class="ts-spot-card"><div class="ts-spot-name">駅弁屋 祭（まつり）</div><div class="ts-spot-sub">1階・新幹線改札前エリア ／ 営業 6:00〜22:00頃</div><div class="ts-spot-desc">全国の駅弁が200種以上。山形の「牛肉どまん中」や「米沢牛弁当」も並ぶことが多い。出発前に購入して車内で食べるのがおすすめ。</div><div class="ts-spot-tags"><span class="ts-spot-tag">🍱 お弁当</span><span class="ts-spot-tag">🗾 全国駅弁</span><span class="ts-spot-tag">🚄 新幹線前</span></div></div>
+    <div class="ts-spot-card"><div class="ts-spot-name">グランスタ東京</div><div class="ts-spot-sub">地下1F・改札外 ／ 営業 8:00〜22:00頃</div><div class="ts-spot-desc">東京駅の地下ショッピングエリア。スイーツ・総菜・雑貨など200店以上。帰りのお土産はここで揃う。混雑する昼は早めに。</div><div class="ts-spot-tags"><span class="ts-spot-tag">🎁 お土産</span><span class="ts-spot-tag">🍰 スイーツ</span><span class="ts-spot-tag">🛍 ショッピング</span></div></div>
+    <div class="ts-spot-card"><div class="ts-spot-name">東京駅一番街</div><div class="ts-spot-sub">地下1F〜1F・八重洲口側</div><div class="ts-spot-desc">キャラクターグッズや東京みやげが集まるゾーン。ポケモン・ジブリ・ジャンプなど定番キャラのショップが並ぶ。</div><div class="ts-spot-tags"><span class="ts-spot-tag">🎮 キャラクター</span><span class="ts-spot-tag">🎁 お土産</span></div></div>
+    <div class="ts-spot-card"><div class="ts-spot-name">東京ステーションホテル ロビー</div><div class="ts-spot-sub">丸の内側・2F（入場自由）</div><div class="ts-spot-desc">1915年創業、赤レンガ駅舎の中に佇む老舗ホテルのロビー。宿泊しなくても見学できる優雅な内装。ドームラウンジはティー利用も可能。</div><div class="ts-spot-tags"><span class="ts-spot-tag">🏛 歴史建築</span><span class="ts-spot-tag">☕ ティーラウンジ</span></div></div>
+  </div>
+
+  <!-- ヒント -->
+  <div class="ts-sub-panel" id="ts-tips">
+    <div class="ts-section-head"><span class="ts-section-icon">💡</span><h2>知っておくと便利なこと</h2></div>
+    <div class="ts-tip-card"><strong>荷物預かり：コインロッカー</strong><br>DAY3は11:00チェックアウト後、荷物をロッカーへ。八重洲南口地下が大型（600〜700円）多め。</div>
+    <div class="ts-tip-card"><strong>新幹線乗り場は「中央のりかえ口」から</strong><br>丸の内・八重洲どちらからでもアクセス可能。在来線から新幹線へ乗り換える場合はICカードのタッチだけで通れます。</div>
+    <div class="ts-tip-card"><strong>丸の内側と八重洲側は改札内で繋がっています</strong><br>東京駅の中央通路（地下1F）は改札外でも丸の内〜八重洲を繋いでいます。外に出なくてもぐるっと回れる。</div>
+    <div class="ts-tip-card"><strong>つばさ139号は16号車 3番D席</strong><br>東京駅発なので席に余裕があります。指定席のため早めにホームへ。15〜20分前には並ぶのがベター。</div>
+    <div class="ts-tip-card"><strong>週末昼は混雑します</strong><br>日曜の昼はグランスタや新幹線改札が混雑。お土産は12:30までに買い終えると安心。</div>
+    <div class="ts-tip-card"><strong>トイレは改札内が快適</strong><br>改札内トイレは比較的空いていて清潔。乗車前に済ませておくと安心。つばさ号車内にもトイレあり。</div>
+  </div>
+
 </div>
 
 <!-- GOURMET -->
@@ -575,7 +791,7 @@ body{background:var(--cream);font-family:'Noto Sans JP',sans-serif;color:var(--n
       </div>
       <div class="info-card-block" style="flex:1;">
         <div class="info-card-label">帰路</div>
-        <div class="info-card-value">東京 18:00<br><small style="font-size:11px;opacity:.6">つばさ153号</small></div>
+        <div class="info-card-value">東京 13:00<br><small style="font-size:11px;opacity:.6">つばさ139号</small></div>
       </div>
     </div>
     <div class="hotel-card">
@@ -1122,38 +1338,42 @@ const GUIDES = {
 const defaultData = {
   day1: [
     { id:'d1-0', time:'8:00頃', title:'自宅出発 🏠', desc:'駅まで約1時間を見て出発', type:'normal', links:[] },
-    { id:'d1-1', time:'9:00', title:'山形駅出発 🚄', desc:'🚄 山形新幹線 つばさ132号 東京行\n🕘 9:00発 → 11:48着（168分）\n📍 山形駅 → 東京駅', type:'train', links:[] },
-    { id:'d1-2', time:'11:48', title:'東京駅到着 → 横浜へ乗り換え', desc:'JR東海道線で横浜へ約28分', type:'transit', guideKey:'transit-tokyo-yokohama', links:[] },
-    { id:'d1-3', time:'12:20頃', title:'横浜駅到着', desc:'みなとみらい線に乗り換えてホテルへ荷物を預けに\n💡 チェックインは14:00〜のため、まず荷物を預けて観光へ', type:'transit', guideKey:'transit-yokohama-hotel', links:[] },
-    { id:'d1-4', time:'13:00', title:'ランチ｜中華街 🍜', desc:'ホテルから徒歩5分。到着後は無理せずゆっくりランチ\n新幹線の疲れを癒しながら食事', type:'spot', guideKey:'spot-chinatown', nextDest:'ホテルニューグランド（徒歩約5分）', links:[] },
-    { id:'d1-5', time:'14:00', title:'ホテルニューグランド チェックイン 🏨', desc:'チェックイン：14:00〜 ／ チェックアウト：〜11:00\n部屋でひと休み。のんびり過ごす', type:'hotel', highlight:true, links:[{label:'公式',url:'https://www.hotel-newgrand.co.jp/'},{label:'地図',url:'https://maps.google.com/?cid=16412194114761053098'}] },
-    { id:'d1-6', time:'17:00頃', title:'山下公園 夕暮れ散歩 🚢', desc:'ホテルすぐ横。夕暮れの港をのんびり散歩\n氷川丸・ベイブリッジを眺めながら', type:'spot', guideKey:'spot-yamashita', nextDest:'中華街（徒歩約5分）', links:[] },
-    { id:'d1-7', time:'18:30頃', title:'夕食｜中華街 🍜', desc:'ホテルから徒歩5分。夕方は比較的空いている\n夜の中華街の雰囲気も楽しい', type:'spot', guideKey:'spot-chinatown', nextDest:'みなとみらい夜景（電車5分）または山下公園夜景（徒歩すぐ）', links:[] },
-    { id:'d1-8', time:'20:00頃', title:'夜景を楽しむ 🌃', desc:'【A案】山下公園〜象の鼻パーク：ホテルから徒歩すぐ。港の夜景\n【B案】みなとみらい：みなとみらい線で約5分。ランドマークのライトアップ\n当日の疲れ具合で決めてOK！', type:'spot', guideKey:'spot-zounohana', links:[] },
+    { id:'d1-1', time:'9:00', title:'山形駅出発 🚄', desc:'🚄 山形新幹線 つばさ132号 東京行\n🕘 9:00発 → 11:48着（168分）\n📍 山形駅 → 東京駅\n🪑 12号車 4番D席', type:'train', links:[] },
+    { id:'d1-2', time:'11:48', title:'東京駅到着 → 横浜へ乗り換え', desc:'JR東海道線で横浜へ約28分\n\n🚉 東京駅（JR東海道線）乗車\n　↓ JR東海道線（横浜方面）約28分\n🔁 横浜駅 下車', type:'transit', guideKey:'transit-tokyo-yokohama', links:[{label:'Yahoo乗り換え',url:'https://transit.yahoo.co.jp/search/result?from=%E6%9D%B1%E4%BA%AC&to=%E6%A8%AA%E6%B5%9C'}] },
+    { id:'d1-3', time:'12:20頃', title:'横浜駅 → ホテルへ 🚃', desc:'みなとみらい線に乗り換えてホテルへ荷物を預けに\n💡 チェックインは14:00〜のため、まず荷物を預けて観光へ\n\n🚉 横浜駅（みなとみらい線）乗車\n　↓ みなとみらい線（元町・中華街方面）約5分\n🏨 元町・中華街駅 下車 → ホテルへ', type:'transit', guideKey:'transit-yokohama-hotel', links:[{label:'Yahoo乗り換え',url:'https://transit.yahoo.co.jp/search/result?from=%E6%A8%AA%E6%B5%9C&to=%E5%85%83%E7%94%BA%E3%83%BB%E4%B8%AD%E8%8F%AF%E8%A1%97'}] },
+    { id:'d1-4', time:'13:00', title:'ランチ｜富泰楼 本店 🍚', desc:'ホテルから徒歩約5分。チャーハン・お粥が名物の中華街老舗\n到着後は無理せずゆっくりランチ。新幹線の疲れを癒しながら', type:'spot', guideKey:'spot-chinatown', nextDest:'ホテルニューグランド（徒歩約5分）', links:[{label:'富泰楼 地図',url:'https://maps.google.com/?q=富泰楼+横浜中華街'}] },
+    { id:'d1-5', time:'14:00', title:'ホテルニューグランド チェックイン 🏨', desc:'チェックイン：14:00〜 ／ チェックアウト：〜11:00\n部屋に荷物を置いてひと休み', type:'hotel', highlight:true, links:[{label:'公式',url:'https://www.hotel-newgrand.co.jp/'},{label:'地図',url:'https://maps.google.com/?cid=16412194114761053098'}] },
+    { id:'d1-6', time:'15:30', title:'横浜大世界 🏯', desc:'ホテルから徒歩約5分。中華街最大級のエンタメ施設\nお土産・雑貨・グルメがまとまっていて雨でも楽しめる', type:'spot', links:[{label:'横浜大世界 公式',url:'https://www.daska.jp/'},{label:'地図',url:'https://maps.google.com/?q=横浜大世界'}] },
+    { id:'d1-7', time:'16:30頃', title:'橫濱媽祖廟 🏮', desc:'横浜大世界のすぐそば。中華街のシンボル的なお廟\n朱色の廟が美しく、参拝もできる。写真スポットとしても人気', type:'spot', nextDest:'ホテルニューグランド（徒歩約5分）', links:[{label:'媽祖廟 公式',url:'https://www.yokohama-masobyo.jp/'},{label:'地図',url:'https://maps.google.com/?q=横浜媽祖廟'}] },
+    { id:'d1-8', time:'18:00', title:'夕食｜萬珍楼 🏮', desc:'ホテルから徒歩約5分。予約済み 18:00〜\n中華街を代表する老舗広東料理店', type:'spot', highlight:true, links:[{label:'萬珍楼 公式',url:'https://www.manchinrou.co.jp/'},{label:'地図',url:'https://maps.google.com/?q=萬珍楼+横浜中華街'}] },
+    { id:'d1-9', time:'20:30頃', title:'山下公園 夜景散歩 🌃', desc:'ホテルすぐ横。夜の港をのんびり散歩\n氷川丸・ベイブリッジのライトアップを眺めながら', type:'spot', guideKey:'spot-yamashita', links:[] },
   ],
   day2: [
-    { id:'d2-1', time:'朝食', title:'朝食｜ホテルニューグランド 🍳', desc:'手配済み', type:'normal', links:[] },
-    { id:'d2-2', time:'10:00', title:'港の見える丘公園 🌿', desc:'タクシーで約5分。バラ園と横浜港の絶景', type:'spot', guideKey:'spot-miharadai', nextDest:'元町ショッピングストリート（徒歩約8分・坂を下る）', links:[] },
-    { id:'d2-3', time:'11:30', title:'元町ショッピングストリート 👜', desc:'おしゃれな通りをのんびりウィンドウショッピング', type:'spot', guideKey:'spot-motomachi', nextDest:'中華街（徒歩約5分）', links:[] },
-    { id:'d2-4', time:'13:00', title:'ランチ｜中華街 🥟', desc:'土曜日は混雑するため11:30前が狙い目', type:'spot', guideKey:'spot-chinatown', nextDest:'ホテルニューグランド（徒歩約5分）', links:[] },
-    { id:'d2-5', time:'14:30', title:'ホテルで休憩 ☕', desc:'ロビーでティータイム。のんびり過ごす', type:'normal', links:[] },
-    { id:'d2-6', time:'16:00', title:'夕暮れの山下公園〜象の鼻パーク 🌅', desc:'海沿いの短い散歩。港の夕景が美しい', type:'spot', guideKey:'spot-zounohana', nextDest:'中華街 or みなとみらい（夕食へ）', links:[] },
-    { id:'d2-7', time:'18:00', title:'夕食 🍷', desc:'中華街 or みなとみらいのレストランで', type:'normal', links:[] },
-    { id:'d2-8', time:'夕食後', title:'錦糸町へ移動 → ホテルレバント チェックイン 🏨', desc:'横浜→錦糸町（約50分）\nチェックイン：15:00〜 ／ チェックアウト：〜11:00', type:'transit', guideKey:'transit-yokohama-kinshicho', highlight:true, links:[{label:'ホテル公式',url:'https://www.tobuhotel.co.jp/levant/'},{label:'地図',url:'https://maps.google.com/maps?q=東武ホテルレバント東京'}] },
+    { id:'d2-1', time:'〜11:00', title:'ホテルニューグランド チェックアウト 🏨', desc:'朝食・部屋でゆっくり → チェックアウト（〜11:00）\nチェックアウト後は荷物を預けてホテル探索へ', type:'hotel', links:[{label:'ホテル公式',url:'https://www.hotel-newgrand.co.jp/'}] },
+    { id:'d2-2', time:'11:00〜12:00', title:'ホテル本館を見て回る 🏛', desc:'ロビーや階段など、クラシックな雰囲気を楽しむ\nホテル内の写真を撮る', type:'spot', links:[] },
+    { id:'d2-3', time:'12:00〜13:30', title:'ランチ｜横浜・中華街エリア 🍽', desc:'ホテル周辺で昼食\n中華街や元町方面のお店でゆっくり食べる', type:'spot', nextDest:'ホテルニューグランド（荷物受け取り）', links:[] },
+    { id:'d2-4', time:'13:30〜14:00', title:'荷物を受け取る 🏨', desc:'ホテルへ戻って預けた荷物を受け取る', type:'normal', links:[] },
+    { id:'d2-5', time:'14:00頃', title:'横浜 → 錦糸町 移動 🚃', desc:'元町・中華街駅から錦糸町まで約55分\n\n🚉 元町・中華街駅（みなとみらい線）乗車\n　↓ みなとみらい線（横浜方面）約5分\n🔁 横浜駅 乗り換え（JR東海道線へ）\n　↓ JR東海道線（東京方面）約25分\n🔁 品川駅 乗り換え（JR総武快速線へ）\n　↓ JR総武快速線（千葉方面）約23分\n🏨 錦糸町駅 下車 → ホテルへ荷物を預ける', type:'transit', links:[{label:'Yahoo乗り換え',url:'https://transit.yahoo.co.jp/search/result?from=%E5%85%83%E7%94%BA%E3%83%BB%E4%B8%AD%E8%8F%AF%E8%A1%97&to=%E9%8C%A6%E7%B3%B8%E7%94%BA'}] },
+    { id:'d2-6a', time:'15:00頃', title:'錦糸町 → 東京駅へ 🚃', desc:'ホテルに荷物を預けたらすぐ東京駅へ\n\n🚉 錦糸町駅（JR総武快速線）乗車\n　↓ JR総武快速線（東京方面）約8分\n🏛 東京駅 下車 → 丸の内口へ', type:'transit', links:[{label:'Yahoo乗り換え',url:'https://transit.yahoo.co.jp/search/result?from=%E9%8C%A6%E7%B3%B8%E7%94%BA&to=%E6%9D%B1%E4%BA%AC'}] },
+    { id:'d2-6', time:'15:15〜18:00', title:'東京駅・丸の内を楽しむ 🏛', desc:'📍 丸の内駅舎を外から眺める（赤レンガ・重要文化財）\n🌿 KITTEガーデン屋上（無料・駅舎を一望できる絶景スポット）\n🛍 グランスタ・丸の内エリアをぶらぶら\n🍽 東京駅周辺で夕食（丸の内・八重洲エリア）', type:'spot', links:[{label:'グランスタ公式',url:'https://www.gransta.jp/'},{label:'KITTE地図',url:'https://www.google.com/maps/search/KITTE+東京'}] },
+    { id:'d2-6b', time:'18:00頃', title:'東京駅 → 錦糸町 移動 🚃', desc:'🚉 東京駅（JR総武快速線）乗車\n　↓ JR総武快速線（千葉方面）約8分\n🏨 錦糸町駅 下車 → ホテルへ', type:'transit', links:[{label:'Yahoo乗り換え',url:'https://transit.yahoo.co.jp/search/result?from=%E6%9D%B1%E4%BA%AC&to=%E9%8C%A6%E7%B3%B8%E7%94%BA'}] },
+    { id:'d2-7', time:'18:30頃', title:'ホテルレバント東京 チェックイン 🏨', desc:'ホテルレバント東京にチェックイン\nチェックイン：15:00〜 ／ チェックアウト：〜11:00', type:'hotel', highlight:true, links:[{label:'ホテル公式',url:'https://www.tobuhotel.co.jp/levant/'},{label:'地図',url:'https://maps.google.com/maps?q=東武ホテルレバント東京'}] },
   ],
   day3: [
     { id:'d3-1', time:'朝食', title:'朝食｜東武ホテルレバント 🍳', desc:'手配済み。ゆっくり食べてチェックアウトへ', type:'normal', links:[] },
     { id:'d3-2', time:'〜11:00', title:'チェックアウト 🏨', desc:'チェックアウト：〜11:00\n※疲れていればレイトチェックアウト（有料）も相談可', type:'normal', links:[{label:'ホテルTEL',url:'tel:0335626111'}] },
-    { id:'d3-3', time:'11:00〜', title:'【A案】ホテルでゆっくり → 東京駅へ', desc:'レイトチェックアウトを利用してホテルで休憩\n15:00頃チェックアウト → 錦糸町から東京駅（8分）\nグランスタでお土産 → 出発\n✅ いちばん疲れない', type:'normal', links:[] },
-    { id:'d3-4', time:'11:00〜', title:'【B案】スカイツリー周辺 → 東京駅へ', desc:'チェックアウト後、スカイツリー外観＆ソラマチ散策（徒歩圏内）\nソラマチでランチ＆お土産 → 14〜15時に東京駅移動\nグランスタでお土産 → 出発\n✅ 移動少なめ・観光も楽しめる', type:'normal', links:[{label:'ソラマチ公式',url:'https://www.tokyo-solamachi.jp/'},{label:'地図',url:'https://maps.google.com/maps?q=東京ソラマチ'}] },
-    { id:'d3-5', time:'11:00〜', title:'【C案】浅草 → 東京駅へ', desc:'錦糸町から浅草（15分）→ 浅草寺・仲見世・食べ歩き\n14時頃に東京駅移動 → 丸の内駅舎・グランスタ\n✅ 観光充実・移動はやや多め', type:'spot', guideKey:'spot-asakusa', links:[] },
-    { id:'d3-6', time:'15:00〜', title:'東京駅散策 🏛', desc:'【全案共通】東京駅に着いたら…\n📍 丸の内駅舎を外から眺める（赤レンガ・重要文化財）\n🌿 KITTEガーデン屋上（無料・駅舎を一望）\n🛍 グランスタでお土産・ランチ\n🪑 ヤエチカ（八重洲地下）に無料休憩スペースあり', type:'normal', links:[{label:'グランスタ公式',url:'https://www.gransta.jp/'},{label:'KITTE地図',url:'https://www.google.com/maps/search/KITTE+東京'}] },
-    { id:'d3-6', time:'18:00', title:'東京駅出発 🚄', desc:'🚄 山形新幹線 つばさ153号 山形行（始発）\n🕕 18:00発 → 20:47着（167分）\n📍 東京駅 → 山形駅', type:'train', highlight:true, links:[] },
-    { id:'d3-7', time:'20:47', title:'山形駅到着', desc:'お疲れさまでした！', type:'normal', links:[] },
-    { id:'d3-8', time:'21:47頃', title:'自宅到着 🏠', desc:'駅から約1時間', type:'normal', links:[] },
+    { id:'d3-3', time:'11:00〜', title:'錦糸町 → 東京駅へ 🚃', desc:'錦糸町駅（JR総武快速線）→ 東京駅（約8分）\n🚉 錦糸町駅（JR総武快速ホーム）から乗車\n　↓ JR総武快速線（千葉→東京方面）\n　↓ 約8分\n🏛 東京駅 着（丸の内口へ）', type:'transit', links:[{label:'Yahoo乗り換え',url:'https://transit.yahoo.co.jp/search/result?from=%E9%8C%A6%E7%B3%B8%E7%94%BA&to=%E6%9D%B1%E4%BA%AC'}] },
+    { id:'d3-4', time:'11:30〜', title:'お土産・ランチ｜東京駅グランスタ 🛍', desc:'🛍 グランスタ地下1Fでお土産をゆっくり選ぶ\n🍱 グランスタ内でランチ（12時前なら比較的空いている）\n⏰ 新幹線まで余裕を持って新幹線ホームへ', type:'normal', links:[{label:'グランスタ公式',url:'https://www.gransta.jp/'}] },
+    { id:'d3-6', time:'13:00', title:'東京駅出発 🚄', desc:'🚄 山形新幹線 つばさ139号 山形行\n🕐 13:00発 → 15:50着\n📍 東京駅 → 山形駅\n🪑 16号車 3番D席', type:'train', highlight:true, links:[] },
+    { id:'d3-7', time:'15:50', title:'山形駅到着', desc:'お疲れさまでした！', type:'normal', links:[] },
+    { id:'d3-8', time:'16:50頃', title:'自宅到着 🏠', desc:'駅から約1時間', type:'normal', links:[] },
   ]
 };
 
+if(location.search.includes('reset=1')){
+  localStorage.removeItem('shiori-data-v10');
+  location.replace(location.pathname);
+}
 let scheduleData = JSON.parse(localStorage.getItem('shiori-data-v10') || 'null') || defaultData;
 function save(){ localStorage.setItem('shiori-data-v10', JSON.stringify(scheduleData)); }
 
@@ -1257,6 +1477,14 @@ function createItemEl(item, day, idx, isNow) {
         <a class="big-btn transit" href="https://www.google.com/maps/dir/現在地/${encodeURIComponent(hotelQuery)}" target="_blank"><span class="big-btn-icon">🗺</span>ルート</a>
         <a class="big-btn hotel" href="${item.links[0]?.url || '#'}" target="_blank"><span class="big-btn-icon">🌐</span>公式</a>
       </div>`;
+  } else if (item.type === 'transit') {
+    const yahooLink = (item.links||[]).find(l => l.label && l.label.includes('Yahoo'));
+    if (yahooLink) {
+      bigBtnsHtml = `
+      <div class="big-btns">
+        <a class="big-btn transit" href="${yahooLink.url}" target="_blank"><span class="big-btn-icon">🚃</span>乗換案内</a>
+      </div>`;
+    }
   } else if (item.type === 'train') {
     // 出発駅を判定（山形→東京 or 東京→山形）
     const isTokyo = item.desc && item.desc.includes('山形行');
@@ -1287,7 +1515,7 @@ function createItemEl(item, day, idx, isNow) {
   }
 
   // Small links (only for non-spot items)
-  const smallLinks = (item.links||[]).filter((_,i) => item.type !== 'spot' && item.type !== 'hotel');
+  const smallLinks = (item.links||[]).filter((_,i) => item.type !== 'spot' && item.type !== 'hotel' && item.type !== 'transit');
   const linksHtml = smallLinks.map(l => `<a class="link-btn" href="${l.url}" target="_blank">${l.label}</a>`).join('');
 
   el.innerHTML = `
@@ -1461,6 +1689,28 @@ function deleteItem(day,idx){
   scheduleData[day].splice(idx,1); save(); renderDay(day);
 }
 document.getElementById('modal-add').addEventListener('click',e=>{if(e.target===document.getElementById('modal-add'))closeAddModal();});
+
+// =============================================
+// TOKYO STATION SUB-NAV
+// =============================================
+function toggleTsCard(card) {
+  card.classList.toggle('open');
+  const toggle = card.querySelector('.ts-route-card-toggle');
+  if(toggle) toggle.textContent = card.classList.contains('open') ? '▲ 閉じる' : '▼ 詳しく見る';
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.ts-sub-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const panel = btn.dataset.tspanel;
+      document.querySelectorAll('.ts-sub-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.ts-sub-panel').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      const target = document.getElementById(panel);
+      if(target) target.classList.add('active');
+    });
+  });
+});
 
 // =============================================
 // TABS
