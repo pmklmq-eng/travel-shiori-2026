@@ -8,10 +8,10 @@
 <style>
 :root {
   --navy: #1a2744; --deep: #0d1a35; --gold: #c9a96e; --gold-light: #e8d5a3;
-  --cream: #f8f4ec; --mist: #e8edf5; --accent: #7a9cbf; --red: #b5474a;
-  --green: #3d8b6e; --white: #fff; --gray: #888;
+  --cream: #f8f4ec; --mist: #e8edf5; --accent: #3d6690; --red: #b5474a;
+  --green: #2f7558; --white: #fff; --gray: #5f6670;
   --border:#e3e7ef; --bg2:#eef1f6; --card:#fff; --shadow:rgba(26,39,68,.08);
-  --fg:#1a2744; --fg2:#555; --fg3:#999; --accent-light:#e6edf6;
+  --fg:#1a2744; --fg2:#555; --fg3:#6b7280; --gold-ink:#8a6420; --accent-light:#e6edf6;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 body{background:var(--cream);font-family:'Noto Sans JP',sans-serif;color:var(--navy);font-weight:300;min-height:100vh;padding-bottom:80px;}
@@ -307,6 +307,21 @@ body{background:var(--cream);font-family:'Noto Sans JP',sans-serif;color:var(--n
 .tl-time{display:block;min-height:22px;line-height:22px;padding-right:130px;margin-bottom:2px;}
 .tl-title{display:block;padding-right:0 !important;line-height:1.5;}
 .tl-item.is-now .tl-title{padding-right:0 !important;}
+
+/* readability (blue palette kept) */
+.app-header-date,.day-banner-date{color:#a9c4e0;}
+.tl-time,.form-label,.guide-section-title,.hotel-night,.wishlist-title{color:var(--gold-ink);}
+.add-btn{color:var(--gold-ink);border-color:var(--gold-ink);}
+.tab{color:rgba(255,255,255,.82);}
+.nav-item{color:rgba(255,255,255,.8);}
+.nav-item.active{color:var(--gold);}
+.big-btn.hotel{color:#7a4f14;}
+.checkin-label{color:#5f6670;}
+.checkin-note{color:#5f6670;}
+.checkin-divider{color:#b8c2d0;}
+.gourmet-shop-price{color:#7a5a1e;}
+.wishlist-empty{color:#5f6670;}
+.tl-drag-handle{color:#b8c2d0;}
 </style>
 </head>
 <body>
@@ -559,7 +574,7 @@ body{background:var(--cream);font-family:'Noto Sans JP',sans-serif;color:var(--n
     <div style="height:1px;background:var(--mist);margin:20px 0;"></div>
 
     <!-- エリア別おすすめ -->
-    <div style="font-size:13px;letter-spacing:4px;color:var(--gold);margin-bottom:14px;">📍 エリア別おすすめ飲食店</div>
+    <div style="font-size:13px;letter-spacing:4px;color:var(--gold-ink);margin-bottom:14px;">📍 エリア別おすすめ飲食店</div>
 
     <!-- 横浜中華街 -->
     <div class="gourmet-area">
