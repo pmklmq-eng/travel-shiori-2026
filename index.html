@@ -692,8 +692,8 @@ body{background:var(--cream);font-family:'Noto Sans JP',sans-serif;color:var(--n
       <div class="gourmet-area-header">
         <div class="gourmet-area-icon">☕</div>
         <div class="gourmet-area-info">
-          <div class="gourmet-area-label">DAY 2 — 元町・山手エリア</div>
-          <div class="gourmet-area-name">元町・山手</div>
+          <div class="gourmet-area-label">DAY 2 — ホテルニューグランド</div>
+          <div class="gourmet-area-name">ホテル内（山下公園前）</div>
         </div>
       </div>
       <div class="gourmet-shop premium">
@@ -1019,7 +1019,7 @@ const GUIDES = {
     content: `
       <div class="guide-section">
         <div class="guide-section-title">電車利用（おすすめ）</div>
-        <div class="guide-row"><div class="guide-row-icon">🚇</div><div class="guide-row-text"><strong>みなとみらい線</strong><br>横浜駅 → 元町・中華街駅｜約8分｜5駅目（終点）<br>料金：Yahoo!乗換案内で確認｜駅からホテルまで徒歩約1分</div></div>
+        <div class="guide-row"><div class="guide-row-icon">🚇</div><div class="guide-row-text"><strong>みなとみらい線</strong><br>横浜駅 → 元町・中華街駅｜約8〜10分｜5駅目（終点）<br>料金：Yahoo!乗換案内で確認｜駅からホテルまで徒歩約1分</div></div>
         <div class="guide-row"><div class="guide-row-icon">🚪</div><div class="guide-row-text"><strong>1番出口（山下公園口）</strong>を出て目の前がホテル（徒歩約1分）</div></div>
       </div>
       <div class="guide-section">
@@ -1105,7 +1105,7 @@ const defaultData = {
     { id:'d1-0', time:'8:00頃', title:'自宅出発 🏠', desc:'駅まで約1時間を見て出発', type:'normal', links:[] },
     { id:'d1-1', time:'9:00', title:'山形駅出発 🚄', desc:'🚄 山形新幹線 つばさ132号 東京行\n🕘 9:00発 → 11:48着（168分）\n📍 山形駅 → 東京駅\n🪑 12号車 4番D席', type:'train', links:[] },
     { id:'d1-2', time:'11:48', title:'東京駅到着 → 横浜へ乗り換え', desc:'JR東海道線で横浜へ約25〜28分\n\n🚉 東京駅（JR東海道線 7〜10番線）乗車\n　↓ JR東海道線（横浜方面）約25〜28分\n🔁 横浜駅 下車', type:'transit', guideKey:'transit-tokyo-yokohama', links:[{label:'Yahoo乗り換え',url:'https://transit.yahoo.co.jp/search/result?from=%E6%9D%B1%E4%BA%AC&to=%E6%A8%AA%E6%B5%9C'}] },
-    { id:'d1-3', time:'12:20頃', title:'横浜駅 → ホテルへ 🚃', desc:'みなとみらい線に乗り換えてホテルへ荷物を預けに\n💡 チェックインは14:00〜のため、まず荷物を預けて観光へ\n\n🚉 横浜駅（みなとみらい線）乗車\n　↓ みなとみらい線（元町・中華街方面）約5分\n🏨 元町・中華街駅 下車 → 1番出口からホテルへ徒歩1分', type:'transit', guideKey:'transit-yokohama-hotel', links:[{label:'Yahoo乗り換え',url:'https://transit.yahoo.co.jp/search/result?from=%E6%A8%AA%E6%B5%9C&to=%E5%85%83%E7%94%BA%E3%83%BB%E4%B8%AD%E8%8F%AF%E8%A1%97'}] },
+    { id:'d1-3', time:'12:20頃', title:'横浜駅 → ホテルへ 🚃', desc:'みなとみらい線に乗り換えてホテルへ荷物を預けに\n💡 チェックインは14:00〜のため、まず荷物を預けて観光へ\n\n🚉 横浜駅（みなとみらい線）乗車\n　↓ みなとみらい線（元町・中華街方面）約8〜10分\n🏨 元町・中華街駅 下車 → 1番出口からホテルへ徒歩1分', type:'transit', guideKey:'transit-yokohama-hotel', links:[{label:'Yahoo乗り換え',url:'https://transit.yahoo.co.jp/search/result?from=%E6%A8%AA%E6%B5%9C&to=%E5%85%83%E7%94%BA%E3%83%BB%E4%B8%AD%E8%8F%AF%E8%A1%97'}] },
     { id:'d1-4', time:'13:00', title:'ランチ｜王府井レストラン 🍚', desc:'横浜中華街の老舗レストラン。本格中華をゆっくり楽しむ\n到着後は無理せずゆっくりランチ。新幹線の疲れを癒しながら', type:'spot', guideKey:'spot-chinatown', nextDest:'ホテルニューグランド（徒歩約5分）', mapQuery:'王府井 横浜中華街', links:[{label:'王府井 地図',url:'https://maps.google.com/?q=王府井+横浜中華街'}] },
     { id:'d1-5', time:'14:00', title:'ホテルニューグランド チェックイン 🏨', desc:'チェックイン：14:00〜 ／ チェックアウト：〜11:00\n部屋に荷物を置いてひと休み', type:'hotel', highlight:true, links:[{label:'公式',url:'https://www.hotel-newgrand.co.jp/'},{label:'地図',url:'https://maps.google.com/?cid=16412194114761053098'}] },
     { id:'d1-6', time:'15:30', title:'横浜大世界 🏯', desc:'ホテルから徒歩約5分。中華街最大級のエンタメ施設\nお土産・雑貨・グルメがまとまっていて雨でも楽しめる', type:'spot', links:[{label:'横浜大世界 公式',url:'https://www.daska.jp/'},{label:'地図',url:'https://maps.google.com/?q=横浜大世界'}] },
@@ -1120,7 +1120,7 @@ const defaultData = {
     { id:'d2-4', time:'13:30〜14:00', title:'荷物を受け取る 🏨', desc:'ホテルへ戻って預けた荷物を受け取る', type:'normal', links:[] },
     { id:'d2-5a', time:'14:00頃', title:'【A案】横浜 → 錦糸町 🚃', desc:'先に錦糸町のホテルへ荷物を預けてから東京駅へ向かう場合\n元町・中華街駅から錦糸町まで約55分\n\n🚉 元町・中華街（みなとみらい線）乗車\n　↓ 横浜 乗り換え（JR横須賀線・総武快速線 直通 千葉方面）\n　※東京止まりなら東京駅地下ホームで総武快速線に乗り換え\n🏨 錦糸町 下車（北口）→ ホテルへ荷物を預ける', type:'transit', links:[{label:'Yahoo乗り換え',url:'https://transit.yahoo.co.jp/search/result?from=%E5%85%83%E7%94%BA%E3%83%BB%E4%B8%AD%E8%8F%AF%E8%A1%97&to=%E9%8C%A6%E7%B3%B8%E7%94%BA'}] },
     { id:'d2-5b', time:'14:00頃', title:'【B案】横浜 → 東京駅 🚃', desc:'東京駅に直接向かう場合（荷物はコインロッカーへ）\n元町・中華街駅から東京駅まで約50分\n\n🚉 元町・中華街（みなとみらい線）乗車\n　↓ 横浜 乗り換え（JR東海道線）\n🏛 東京駅 下車 → 丸の内口へ\n※荷物：東京駅構内のコインロッカーを利用', type:'transit', links:[{label:'Yahoo乗り換え',url:'https://transit.yahoo.co.jp/search/result?from=%E5%85%83%E7%94%BA%E3%83%BB%E4%B8%AD%E8%8F%AF%E8%A1%97&to=%E6%9D%B1%E4%BA%AC'}] },
-    { id:'d2-5c', time:'14:00頃', title:'【C案】山下公園 → 横浜駅（シーバス） ⛴', desc:'荷物を受け取ったら山下公園からシーバス（観光船）で横浜駅東口へ\n海から横浜の景色を楽しみながら移動できる観光ルート\n\n⛴ 山下公園さん橋 乗船\n　↓ シーバス 約20分〜（寄港する便は長め。料金・所要は公式で要確認）\n🚉 横浜駅東口 下船 → JRで錦糸町（A案）または東京駅（B案）へ\n\n※要事前に時刻確認（運行本数が少ない場合あり）', type:'transit', links:[{label:'シーバス公式',url:'https://www.welcome.city.yokohama.jp/topics/tp_detail.php?tpid=T03915'},{label:'Yahoo乗り換え（横浜→錦糸町）',url:'https://transit.yahoo.co.jp/search/result?from=%E6%A8%AA%E6%B5%9C&to=%E9%8C%A6%E7%B3%B8%E7%94%BA'}] },
+    { id:'d2-5c', time:'14:00頃', title:'【C案】山下公園→横浜駅（シーバス）⛴', desc:'荷物を受け取ったら山下公園からシーバス（観光船）で横浜駅東口へ\n海から横浜の景色を楽しみながら移動できる観光ルート\n\n⛴ 山下公園さん橋 乗船\n　↓ シーバス 約20分〜（寄港する便は長め。料金・所要は公式で要確認）\n🚉 横浜駅東口 下船 → JRで錦糸町（A案）または東京駅（B案）へ\n\n※要事前に時刻確認（運行本数が少ない場合あり）', type:'transit', links:[{label:'⛴ シーバス時刻表',url:'https://www.yokohama-cruising.jp/contents/seabass.html'},{label:'Yahoo乗り換え（横浜→錦糸町）',url:'https://transit.yahoo.co.jp/search/result?from=%E6%A8%AA%E6%B5%9C&to=%E9%8C%A6%E7%B3%B8%E7%94%BA'}] },
     { id:'d2-6a', time:'15:15頃', title:'【A案】錦糸町 → 東京駅へ 🚃', desc:'ホテルに荷物を預けたらすぐ東京駅へ（錦糸町着は15:00前後の見込み）\n\n🚉 錦糸町駅（JR総武快速線）乗車\n　↓ JR総武快速線（東京方面）約8分\n🏛 東京駅 下車 → 丸の内口へ', type:'transit', links:[{label:'Yahoo乗り換え',url:'https://transit.yahoo.co.jp/search/result?from=%E9%8C%A6%E7%B3%B8%E7%94%BA&to=%E6%9D%B1%E4%BA%AC'}] },
     { id:'d2-6', time:'15:30〜18:00', title:'東京駅・丸の内を楽しむ 🏛', desc:'📍 丸の内駅舎を外から眺める（赤レンガ・重要文化財）\n🌿 KITTEガーデン屋上（無料・駅舎を一望できる絶景スポット）\n🌿 丸の内エリアをぶらぶら', type:'spot', links:[{label:'KITTE地図',url:'https://www.google.com/maps/search/KITTE+東京'}] },
     { id:'d2-6b', time:'18:00頃', title:'東京駅 → 錦糸町 移動 🚃', desc:'【A案・B案 共通】ホテルへ戻る\n💼 B案の場合：先に東京駅のコインロッカーから荷物を取り出す\n\n🚉 東京駅（JR総武快速線）乗車\n　↓ JR総武快速線（千葉方面）約8分\n🏨 錦糸町駅 下車 → ホテルへ', type:'transit', links:[{label:'Yahoo乗り換え',url:'https://transit.yahoo.co.jp/search/result?from=%E6%9D%B1%E4%BA%AC&to=%E9%8C%A6%E7%B3%B8%E7%94%BA'}] },
@@ -1140,7 +1140,7 @@ const defaultData = {
 function esc(s){ if(s==null) return ''; return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
 
 if(location.search.includes('reset=1')){
-  localStorage.removeItem('shiori-data-v11');
+  localStorage.removeItem('shiori-data-v12');
   location.replace(location.pathname);
 }
 function loadJSON(key, fallback) {
@@ -1151,8 +1151,8 @@ function loadJSON(key, fallback) {
     return structuredClone(fallback);
   }
 }
-let scheduleData = loadJSON('shiori-data-v11', defaultData);
-function save(){ localStorage.setItem('shiori-data-v11', JSON.stringify(scheduleData)); }
+let scheduleData = loadJSON('shiori-data-v12', defaultData);
+function save(){ localStorage.setItem('shiori-data-v12', JSON.stringify(scheduleData)); }
 
 // =============================================
 // NOW DETECTION
@@ -1258,9 +1258,13 @@ function createItemEl(item, day, idx, isNow) {
         <a class="big-btn hotel" href="${isNew ? 'https://www.hotel-newgrand.co.jp/' : 'https://www.tobuhotel.co.jp/levant/'}" target="_blank"><span class="big-btn-icon">🌐</span>公式</a>
       </div>`;
   } else if (item.type === 'transit') {
-    const yahooLinks = (item.links||[]).filter(l => l.label && l.label.includes('Yahoo'));
+    const yahooLinks = (item.links||[]).filter(l => l.label && (l.label.includes('Yahoo') || l.label.includes('時刻表')));
     if (yahooLinks.length) {
-      const btns = yahooLinks.map(l => `<a class="big-btn transit" href="${l.url}" target="_blank"><span class="big-btn-icon">🚃</span>${l.label}</a>`).join('');
+      const btns = yahooLinks.map(l => {
+        const isShip = l.label.includes('⛴');
+        const label = isShip ? l.label.replace('⛴','').trim() : l.label;
+        return `<a class="big-btn transit" href="${esc(l.url)}" target="_blank"><span class="big-btn-icon">${isShip ? '⛴' : '🚃'}</span>${esc(label)}</a>`;
+      }).join('');
       bigBtnsHtml = `<div class="big-btns">${btns}</div>`;
     }
   } else if (item.type === 'train') {
