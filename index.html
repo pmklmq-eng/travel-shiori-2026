@@ -1121,7 +1121,7 @@ const GUIDES = {
 // =============================================
 const defaultData = {
   day1: [
-    { id:'d1-0', time:'8:00頃', title:'自宅出発 🏠', desc:'駅まで約1時間を見て出発', type:'normal', links:[] },
+    { id:'d1-0', time:'7:45', title:'自宅出発 🏠', desc:'車で山形駅へ（約1時間）\n🅿️ タイムズ山形駅ビル駐車場に駐車', type:'normal', links:[{label:'🅿️ 駐車場 地図',url:'https://maps.google.com/?q=%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%BA%E5%B1%B1%E5%BD%A2%E9%A7%85%E3%83%93%E3%83%AB%E9%A7%90%E8%BB%8A%E5%A0%B4'}] },
     { id:'d1-1', time:'9:00', title:'山形駅出発 🚄', desc:'🚄 山形新幹線 つばさ132号 東京行\n🕘 9:00発 → 11:48着（168分）\n📍 山形駅 → 東京駅\n🪑 12号車 4番D席', type:'train', links:[] },
     { id:'d1-2', time:'11:48', title:'東京駅到着 → 横浜へ乗り換え', desc:'JR東海道線で横浜へ約25〜28分\n\n🚉 東京駅（JR東海道線 7〜10番線）乗車\n　↓ JR東海道線（横浜方面）約25〜28分\n🔁 横浜駅 下車', type:'transit', guideKey:'transit-tokyo-yokohama', links:[{label:'Yahoo乗り換え',url:'https://transit.yahoo.co.jp/search/result?from=%E6%9D%B1%E4%BA%AC&to=%E6%A8%AA%E6%B5%9C'}] },
     { id:'d1-3', time:'12:20頃', title:'横浜駅 → ホテルへ 🚃', desc:'みなとみらい線に乗り換えてホテルへ荷物を預けに\n💡 チェックインは14:00〜のため、まず荷物を預けて観光へ\n\n🚉 横浜駅（みなとみらい線）乗車\n　↓ みなとみらい線（元町・中華街方面）約8〜10分\n🏨 元町・中華街駅 下車 → 1番出口からホテルへ徒歩1分', type:'transit', guideKey:'transit-yokohama-hotel', links:[{label:'Yahoo乗り換え',url:'https://transit.yahoo.co.jp/search/result?from=%E6%A8%AA%E6%B5%9C&to=%E5%85%83%E7%94%BA%E3%83%BB%E4%B8%AD%E8%8F%AF%E8%A1%97'}] },
@@ -1151,15 +1151,15 @@ const defaultData = {
     { id:'d3-3', time:'11:00〜', title:'錦糸町 → 東京駅へ 🚃', desc:'錦糸町駅（JR総武快速線）→ 東京駅（約8分）\n🚉 錦糸町駅（JR総武快速ホーム）から乗車\n　↓ JR総武快速線（千葉→東京方面）\n　↓ 約8分\n🏛 東京駅 着（丸の内口へ）', type:'transit', links:[{label:'Yahoo乗り換え',url:'https://transit.yahoo.co.jp/search/result?from=%E9%8C%A6%E7%B3%B8%E7%94%BA&to=%E6%9D%B1%E4%BA%AC'}] },
     { id:'d3-4', time:'11:30〜', title:'東京駅周辺で過ごす 🏛', desc:'⏰ 12:30頃には新幹線改札へ向かう', type:'normal', links:[] },
     { id:'d3-6', time:'13:00', title:'東京駅出発 🚄', desc:'🚄 山形新幹線 つばさ139号 山形行\n🕐 13:00発 → 15:50着\n📍 東京駅 → 山形駅\n🪑 16号車 3番D席', type:'train', highlight:true, links:[] },
-    { id:'d3-7', time:'15:50', title:'山形駅到着', desc:'お疲れさまでした！', type:'normal', links:[] },
-    { id:'d3-8', time:'16:50頃', title:'自宅到着 🏠', desc:'駅から約1時間', type:'normal', links:[] },
+    { id:'d3-7', time:'15:50', title:'山形駅到着', desc:'お疲れさまでした！\n🅿️ タイムズ山形駅ビル駐車場で車に乗って帰宅', type:'normal', links:[] },
+    { id:'d3-8', time:'16:50頃', title:'自宅到着 🏠', desc:'駐車場から車で約1時間', type:'normal', links:[] },
   ]
 };
 
 function esc(s){ if(s==null) return ''; return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
 
 if(location.search.includes('reset=1')){
-  localStorage.removeItem('shiori-data-v12');
+  localStorage.removeItem('shiori-data-v13');
   location.replace(location.pathname);
 }
 function loadJSON(key, fallback) {
@@ -1170,8 +1170,8 @@ function loadJSON(key, fallback) {
     return structuredClone(fallback);
   }
 }
-let scheduleData = loadJSON('shiori-data-v12', defaultData);
-function save(){ localStorage.setItem('shiori-data-v12', JSON.stringify(scheduleData)); }
+let scheduleData = loadJSON('shiori-data-v13', defaultData);
+function save(){ localStorage.setItem('shiori-data-v13', JSON.stringify(scheduleData)); }
 
 // =============================================
 // NOW DETECTION
