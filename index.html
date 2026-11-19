@@ -1124,7 +1124,7 @@ const defaultData = {
     { id:'d1-0', time:'7:45', title:'自宅出発 🏠', desc:'車で山形駅へ\n🅿️ タイムズ山形駅ビル駐車場に駐車\n⏰ 発車の1時間15分前に出発', type:'normal', links:[{label:'🅿️ 駐車場 地図',url:'https://maps.google.com/?q=%E3%82%BF%E3%82%A4%E3%83%A0%E3%82%BA%E5%B1%B1%E5%BD%A2%E9%A7%85%E3%83%93%E3%83%AB%E9%A7%90%E8%BB%8A%E5%A0%B4'}] },
     { id:'d1-1', time:'9:00', title:'山形駅出発 🚄', desc:'🚄 山形新幹線 つばさ132号 東京行\n🕘 9:00発 → 11:48着（168分）\n📍 山形駅 → 東京駅\n🪑 12号車 4番D席', type:'train', links:[] },
     { id:'d1-2', time:'11:48', title:'東京駅到着 → 横浜へ乗り換え', desc:'JR東海道線で横浜へ約25〜28分\n\n🚉 東京駅（JR東海道線 7〜10番線）乗車\n　↓ JR東海道線（横浜方面）約25〜28分\n🔁 横浜駅 下車', type:'transit', guideKey:'transit-tokyo-yokohama', links:[{label:'Yahoo乗り換え',url:'https://transit.yahoo.co.jp/search/result?from=%E6%9D%B1%E4%BA%AC&to=%E6%A8%AA%E6%B5%9C'}] },
-    { id:'d1-3', time:'12:20頃', title:'横浜駅 → ホテルへ 🚃', desc:'みなとみらい線に乗り換えてホテルへ荷物を預けに\n💡 チェックインは14:00〜のため、まず荷物を預けて観光へ\n\n🚉 横浜駅（みなとみらい線）乗車\n　↓ みなとみらい線（元町・中華街方面）約8〜10分\n🏨 元町・中華街駅 下車 → 1番出口からホテルへ徒歩1分', type:'transit', guideKey:'transit-yokohama-hotel', links:[{label:'Yahoo乗り換え',url:'https://transit.yahoo.co.jp/search/result?from=%E6%A8%AA%E6%B5%9C&to=%E5%85%83%E7%94%BA%E3%83%BB%E4%B8%AD%E8%8F%AF%E8%A1%97'}] },
+    { id:'d1-3', time:'12:20頃', title:'横浜駅 → ホテルへ 🚃', desc:'💡 チェックインは14:00〜のため、まず荷物を預けて観光へ\n\n🚉 横浜駅（みなとみらい線）乗車\n　↓ みなとみらい線（元町・中華街方面）約8〜10分\n🏨 元町・中華街駅 下車 → 1番出口からホテルへ徒歩1分', type:'transit', guideKey:'transit-yokohama-hotel', links:[{label:'Yahoo乗り換え',url:'https://transit.yahoo.co.jp/search/result?from=%E6%A8%AA%E6%B5%9C&to=%E5%85%83%E7%94%BA%E3%83%BB%E4%B8%AD%E8%8F%AF%E8%A1%97'}] },
     { id:'d1-4', time:'13:00', title:'ランチ｜王府井レストラン 🍚', desc:'横浜中華街の老舗レストラン。本格中華をゆっくり楽しむ\n到着後は無理せずゆっくりランチ。新幹線の疲れを癒しながら', type:'spot', guideKey:'spot-chinatown', nextDest:'ホテルニューグランド（徒歩約5分）', mapQuery:'王府井 横浜中華街', links:[{label:'王府井 地図',url:'https://maps.google.com/?q=王府井+横浜中華街'}] },
     { id:'d1-5', time:'14:00', title:'ホテルニューグランド チェックイン 🏨', desc:'チェックイン：14:00〜 ／ チェックアウト：〜11:00\n部屋に荷物を置いてひと休み', type:'hotel', highlight:true, links:[{label:'公式',url:'https://www.hotel-newgrand.co.jp/'},{label:'地図',url:'https://maps.google.com/?cid=16412194114761053098'}] },
     { id:'d1-6', time:'15:30', title:'横浜大世界 🏯', desc:'ホテルから徒歩約5分。中華街最大級のエンタメ施設\nお土産・雑貨・グルメがまとまっていて雨でも楽しめる', type:'spot', links:[{label:'横浜大世界 公式',url:'https://www.daska.jp/'},{label:'地図',url:'https://maps.google.com/?q=横浜大世界'}] },
@@ -1159,7 +1159,7 @@ const defaultData = {
 function esc(s){ if(s==null) return ''; return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
 
 if(location.search.includes('reset=1')){
-  localStorage.removeItem('shiori-data-v15');
+  localStorage.removeItem('shiori-data-v16');
   location.replace(location.pathname);
 }
 function loadJSON(key, fallback) {
@@ -1170,8 +1170,8 @@ function loadJSON(key, fallback) {
     return structuredClone(fallback);
   }
 }
-let scheduleData = loadJSON('shiori-data-v15', defaultData);
-function save(){ localStorage.setItem('shiori-data-v15', JSON.stringify(scheduleData)); }
+let scheduleData = loadJSON('shiori-data-v16', defaultData);
+function save(){ localStorage.setItem('shiori-data-v16', JSON.stringify(scheduleData)); }
 
 // =============================================
 // NOW DETECTION
