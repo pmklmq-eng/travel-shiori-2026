@@ -447,21 +447,21 @@ body{background:var(--cream);font-family:'Noto Sans JP',sans-serif;color:var(--n
     <div class="ts-route-card" onclick="toggleTsCard(this)">
       <div class="ts-route-card-header">
         <div class="ts-route-card-title">新幹線ホーム → 横浜（東海道線）</div>
-        <span class="ts-route-card-badge ts-badge-walk">徒歩5分</span>
+        <span class="ts-route-card-badge ts-badge-walk">12:06発</span>
       </div>
       <div class="ts-route-card-toggle">▼ 詳しく見る</div>
       <div class="ts-route-card-detail">
         <div class="ts-route-meta">
-          <div class="ts-meta-chip">⏱ <strong>5〜8分</strong></div>
-          <div class="ts-meta-chip">🚶 <strong>乗換のみ</strong></div>
+          <div class="ts-meta-chip">⏱ 乗換 <strong>18分</strong></div>
+          <div class="ts-meta-chip">🚃 <strong>10番線</strong></div>
         </div>
         <ul class="ts-step-list">
-          <li class="ts-step-item"><div class="ts-step-num">1</div><div class="ts-step-content"><div class="ts-step-text"><strong>新幹線ホーム</strong>を降りて改札方向へ</div><div class="ts-step-note">つばさは東北・山形新幹線の20〜23番線に到着</div></div></li>
-          <li class="ts-step-item"><div class="ts-step-num">2</div><div class="ts-step-content"><div class="ts-step-text">在来線<strong>中央乗換口</strong>（改札内）を通過</div><div class="ts-step-note">Suica・ICカードそのまま使えます</div></div></li>
-          <li class="ts-step-item"><div class="ts-step-num">3</div><div class="ts-step-content"><div class="ts-step-text"><span class="line-tag line-tokaido">東海道線</span>のホームへ</div><div class="ts-step-note">7〜10番線。横浜まで約25〜28分</div></div></li>
-          <li class="ts-step-item"><div class="ts-step-num">4</div><div class="ts-step-content"><div class="ts-step-text">横浜駅で下車</div><div class="ts-step-note">運賃：530円（IC: 528円）</div></div></li>
+          <li class="ts-step-item"><div class="ts-step-num">1</div><div class="ts-step-content"><div class="ts-step-text"><strong>新幹線ホーム</strong>を降りて改札方向へ</div><div class="ts-step-note">11:48着　つばさ132号（20〜23番線）</div></div></li>
+          <li class="ts-step-item"><div class="ts-step-num">2</div><div class="ts-step-content"><div class="ts-step-text">「<strong>在来線のりかえ</strong>」の改札を通る</div><div class="ts-step-note">その後は「東海道線」の表示へ</div></div></li>
+          <li class="ts-step-item"><div class="ts-step-num">3</div><div class="ts-step-content"><div class="ts-step-text"><span class="line-tag line-tokaido">東海道線</span> <strong>10番線</strong>へ</div><div class="ts-step-note">12:06発 熱海行</div></div></li>
+          <li class="ts-step-item"><div class="ts-step-num">4</div><div class="ts-step-content"><div class="ts-step-text">横浜 <strong>12:33着</strong>（6番線）</div><div class="ts-step-note">27分　運賃 530円（IC 528円）</div></div></li>
         </ul>
-        <a href="https://transit.yahoo.co.jp/search/result?from=東京&to=横浜&y=2026&m=11&d=20&hh=11&m2=5&type=1" target="_blank" class="ts-map-btn">🗺 Yahoo乗換案内で確認</a>
+        <a href="https://transit.yahoo.co.jp/search/result?from=東京&to=横浜&y=2026&m=11&d=20&hh=12&m1=0&m2=6&type=1" target="_blank" class="ts-map-btn">🗺 Yahoo乗換案内で確認</a>
       </div>
     </div>
     <div class="ts-route-card" onclick="toggleTsCard(this)">
@@ -1016,8 +1016,8 @@ const GUIDES = {
     content: `
       <div class="guide-section">
         <div class="guide-section-title">おすすめルート</div>
-        <div class="guide-row"><div class="guide-row-icon">🚉</div><div class="guide-row-text"><strong>JR東海道線</strong><br>東京駅 → 横浜駅｜約25〜28分｜乗換なし<br>料金：<strong>1人530円 / 2人1,060円（IC 528円）</strong>（Suica可）</div></div>
-        <div class="guide-row"><div class="guide-row-icon">💡</div><div class="guide-row-text">東京駅では<strong>7〜10番線（東海道線・上野東京ライン）</strong>へ。<br>本数が多く、どの列車でも横浜に停車。</div></div>
+        <div class="guide-row"><div class="guide-row-icon">🚉</div><div class="guide-row-text"><strong>JR東海道線 熱海行</strong><br>東京 <strong>12:06発（10番線）</strong> → 横浜 <strong>12:33着（6番線）</strong>｜27分<br>料金：1人530円（IC 528円）</div></div>
+        <div class="guide-row"><div class="guide-row-icon">💡</div><div class="guide-row-text">新幹線を降りたら「<strong>在来線のりかえ</strong>」改札 → 「東海道線」の表示へ</div></div>
       </div>
       <div class="guide-section">
         <div class="guide-section-title">その他のルート</div>
