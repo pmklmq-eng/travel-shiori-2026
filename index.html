@@ -382,7 +382,7 @@ body{background:var(--cream);font-family:'Noto Sans JP',sans-serif;color:var(--n
     <div class="day-banner-num">02</div>
     <div class="day-banner-info">
       <div class="day-banner-date">NOV 21, 2026 — SAT</div>
-      <div class="day-banner-theme">ニューグランドでゆっくり・東京へ移動</div>
+      <div class="day-banner-theme">シーバス・横浜駅ランチ・東京駅 → 錦糸町</div>
     </div>
   </div>
   <div class="quick-bar">
@@ -1200,17 +1200,14 @@ const defaultData = {
     { id:'d1-9', time:'20:30頃', title:'山下公園 夜景散歩 🌃', desc:'ホテルすぐ横', type:'spot', guideKey:'spot-yamashita', mapQuery:'山下公園 横浜', links:[] },
   ],
   day2: [
-    { id:'d2-1', time:'〜11:00', title:'ホテルニューグランド チェックアウト 🏨', desc:'チェックアウト：〜11:00\n🧳 荷物をホテルに預ける', type:'hotel', links:[{label:'ホテル公式',url:'https://www.hotel-newgrand.co.jp/'}] },
-    { id:'d2-2', time:'11:00〜12:00', title:'ホテル本館を見て回る 🏛', desc:'', type:'spot', links:[] },
-    { id:'d2-3', time:'12:00〜13:30', title:'昼食 🍽', desc:'', type:'spot', nextDest:'ホテルニューグランド（荷物受け取り）', links:[] },
-    { id:'d2-4', time:'13:30〜14:00', title:'荷物を受け取る 🏨', desc:'', type:'normal', links:[] },
-    { id:'d2-5a', time:'14:00頃', title:'【A案】横浜 → 錦糸町 🚃', desc:'元町・中華街駅から錦糸町まで約55分\n\n🚉 元町・中華街（みなとみらい線）乗車\n　↓ 横浜 乗り換え（JR横須賀線・総武快速線 直通 千葉方面）\n　※東京止まりなら東京駅地下ホームで総武快速線に乗り換え\n🏨 錦糸町 下車（北口）→ ホテルへ荷物を預ける', type:'transit', links:[{label:'Yahoo乗り換え',url:'https://transit.yahoo.co.jp/search/result?from=%E5%85%83%E7%94%BA%E3%83%BB%E4%B8%AD%E8%8F%AF%E8%A1%97&to=%E9%8C%A6%E7%B3%B8%E7%94%BA&y=2026&m=11&d=21&hh=14&m1=0&m2=0&type=1'}] },
-    { id:'d2-5b', time:'14:00頃', title:'【B案】横浜 → 東京駅 🚃', desc:'元町・中華街駅から東京駅まで約50分\n\n🚉 元町・中華街（みなとみらい線）乗車\n　↓ 横浜 乗り換え（JR東海道線）\n🏛 東京駅 下車 → 丸の内口へ\n※荷物：東京駅構内のコインロッカーを利用', type:'transit', links:[{label:'Yahoo乗り換え',url:'https://transit.yahoo.co.jp/search/result?from=%E5%85%83%E7%94%BA%E3%83%BB%E4%B8%AD%E8%8F%AF%E8%A1%97&to=%E6%9D%B1%E4%BA%AC&y=2026&m=11&d=21&hh=14&m1=0&m2=0&type=1'}] },
-    { id:'d2-5c', time:'14:00頃', title:'【C案】山下公園→横浜駅（シーバス）⛴', desc:'⛴ 山下公園さん橋 乗船\n　↓ シーバス 約20分〜（寄港する便は長め）\n🚉 横浜駅東口 下船 → JRで錦糸町（A案）または東京駅（B案）へ\n※時刻・料金は事前に確認', type:'transit', links:[{label:'⛴ シーバス時刻表',url:'https://www.yokohama-cruising.jp/contents/seabass.html'},{label:'Yahoo乗り換え（横浜→錦糸町）',url:'https://transit.yahoo.co.jp/search/result?from=%E6%A8%AA%E6%B5%9C&to=%E9%8C%A6%E7%B3%B8%E7%94%BA&y=2026&m=11&d=21&hh=14&m1=3&m2=0&type=1'}] },
-    { id:'d2-6a', time:'15:15頃', title:'【A案】錦糸町 → 東京駅へ 🚃', desc:'🚉 錦糸町駅（JR総武快速線）乗車\n　↓ JR総武快速線（東京方面）約8分\n🏛 東京駅 下車 → 丸の内口へ', type:'transit', links:[{label:'Yahoo乗り換え',url:'https://transit.yahoo.co.jp/search/result?from=%E9%8C%A6%E7%B3%B8%E7%94%BA&to=%E6%9D%B1%E4%BA%AC&y=2026&m=11&d=21&hh=15&m1=1&m2=5&type=1'}] },
-    { id:'d2-6', time:'15:30〜18:00', title:'東京駅・丸の内を楽しむ 🏛', desc:'📍 丸の内駅舎（赤レンガ）\n🌿 KITTEガーデン屋上（無料）', type:'spot', links:[{label:'KITTE地図',url:'https://www.google.com/maps/search/KITTE+東京'}] },
-    { id:'d2-6b', time:'18:00頃', title:'東京駅 → 錦糸町 移動 🚃', desc:'💼 B案の場合：先に東京駅のコインロッカーから荷物を取り出す\n\n🚉 東京駅（JR総武快速線）乗車\n　↓ JR総武快速線（千葉方面）約8分\n🏨 錦糸町駅 下車 → ホテルへ', type:'transit', links:[{label:'Yahoo乗り換え',url:'https://transit.yahoo.co.jp/search/result?from=%E6%9D%B1%E4%BA%AC&to=%E9%8C%A6%E7%B3%B8%E7%94%BA&y=2026&m=11&d=21&hh=18&m1=0&m2=0&type=1'}] },
-    { id:'d2-7', time:'18:30頃', title:'東武ホテルレバント東京 チェックイン 🏨', desc:'チェックイン：15:00〜 ／ チェックアウト：〜11:00', type:'hotel', highlight:true, links:[{label:'ホテル公式',url:'https://www.tobuhotel.co.jp/levant/'},{label:'地図',url:'https://maps.google.com/maps?q=東武ホテルレバント東京'}] },
+    { id:'d2-0', time:'朝食', title:'朝食｜熊魚菴 たん熊北店（ニューグランド本館5F）🍱', desc:'✅ 高級和食の朝食を食べた', type:'spot', links:[{label:'公式',url:'https://www.hotel-newgrand.co.jp/restaurant/'}] },
+    { id:'d2-1', time:'〜11:00', title:'ホテルニューグランド チェックアウト 🏨', desc:'チェックアウト：〜11:00', type:'hotel', links:[{label:'ホテル公式',url:'https://www.hotel-newgrand.co.jp/'}] },
+    { id:'d2-2', time:'11:30', title:'シーバス 山下公園 → 横浜駅東口 ⛴', desc:'⛴ 山下公園さん橋 11:30発（直行）\n　→ 横浜駅東口 11:50ごろ着　約20分\n💴 大人1,500円', type:'transit', links:[{label:'⛴ シーバス時刻表',url:'https://yokohama-cruising.jp/seabass/timetable/'}] },
+    { id:'d2-3', time:'12:00頃', title:'ランチ｜フルッティ ディ マーレ 🐟', desc:'横浜ベイクォーター3F・海鮮', type:'spot', links:[{label:'地図',url:'https://maps.google.com/?q=%E3%83%95%E3%83%AB%E3%83%83%E3%83%86%E3%82%A3%20%E3%83%87%E3%82%A3%20%E3%83%9E%E3%83%BC%E3%83%AC%20%E6%A8%AA%E6%B5%9C%E3%83%99%E3%82%A4%E3%82%AF%E3%82%A9%E3%83%BC%E3%82%BF%E3%83%BC'}] },
+    { id:'d2-4', time:'13:00頃', title:'横浜駅 → 東京駅 🚃', desc:'🚉 横浜（JR東海道線）→ 東京　約25分', type:'transit', links:[{label:'Yahoo乗り換え',url:'https://transit.yahoo.co.jp/search/result?from=%E6%A8%AA%E6%B5%9C&to=%E6%9D%B1%E4%BA%AC&y=2026&m=11&d=21&hh=13&m1=0&m2=0&type=1'}] },
+    { id:'d2-5', time:'13:30頃', title:'東京駅 赤レンガ駅舎 🏛', desc:'📍 丸の内駅舎（赤レンガ）', type:'spot', links:[{label:'地図',url:'https://maps.google.com/?q=%E6%9D%B1%E4%BA%AC%E9%A7%85%20%E4%B8%B8%E3%81%AE%E5%86%85%E9%A7%85%E8%88%8E'}] },
+    { id:'d2-6', time:'見学後', title:'東京駅 → 錦糸町 🚃', desc:'🚉 東京（JR総武快速線・地下ホーム）→ 錦糸町　約8分', type:'transit', links:[{label:'Yahoo乗り換え',url:'https://transit.yahoo.co.jp/search/result?from=%E6%9D%B1%E4%BA%AC&to=%E9%8C%A6%E7%B3%B8%E7%94%BA&y=2026&m=11&d=21&hh=14&m1=3&m2=0&type=1'}] },
+    { id:'d2-7', time:'15:00〜', title:'東武ホテルレバント東京 チェックイン 🏨', desc:'チェックイン：15:00〜 ／ チェックアウト：〜11:00', type:'hotel', highlight:true, links:[{label:'ホテル公式',url:'https://www.tobuhotel.co.jp/levant/'},{label:'地図',url:'https://maps.google.com/maps?q=東武ホテルレバント東京'}] },
   ],
   day3: [
     { id:'d3-1', time:'朝食', title:'朝食｜東武ホテルレバント 🍳', desc:'手配済み', type:'normal', links:[] },
