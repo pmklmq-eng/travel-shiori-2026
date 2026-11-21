@@ -404,7 +404,7 @@ body{background:var(--cream);font-family:'Noto Sans JP',sans-serif;color:var(--n
     <div class="day-banner-num">03</div>
     <div class="day-banner-info">
       <div class="day-banner-date">NOV 22, 2026 — SUN</div>
-      <div class="day-banner-theme">東京・帰路へ</div>
+      <div class="day-banner-theme">帰宅日｜錦糸町 → 東京 → 山形</div>
     </div>
   </div>
   <div class="quick-bar">
@@ -1209,11 +1209,16 @@ const defaultData = {
     { id:'d2-8a', time:'夜', title:'【A案】夕食｜テルミナ2 🍽', desc:'JR錦糸町駅の駅ビル', type:'spot', links:[{label:'地図',url:'https://maps.google.com/?q=%E3%83%86%E3%83%AB%E3%83%9F%E3%83%8A2%20%E9%8C%A6%E7%B3%B8%E7%94%BA'}] },
   ],
   day3: [
+    { id:'d3-0', time:'8:00〜9:00', title:'運行状況を確認 ⚠️', desc:'・山形新幹線の運行状況を確認\n・ホテルを出る前にも遅れや運休がないか見直す\n・総武快速の時刻に「運転日注意」の印あり → 当日の発車案内を優先', type:'normal', links:[] },
     { id:'d3-1', time:'朝食', title:'朝食｜東武ホテルレバント 🍳', desc:'手配済み', type:'normal', links:[] },
-    { id:'d3-2', time:'〜11:00', title:'チェックアウト 🏨', desc:'チェックアウト：〜11:00', type:'normal', links:[{label:'ホテルTEL',url:'tel:0356115511'}] },
-    { id:'d3-3', time:'11:00〜', title:'錦糸町 → 東京駅へ 🚃', desc:'🚉 錦糸町駅（JR総武快速ホーム）から乗車\n　↓ JR総武快速線（東京方面）約8分\n🏛 東京駅 着（丸の内口へ）', type:'transit', links:[{label:'Yahoo乗り換え',url:'https://transit.yahoo.co.jp/search/result?from=%E9%8C%A6%E7%B3%B8%E7%94%BA&to=%E6%9D%B1%E4%BA%AC&y=2026&m=11&d=22&hh=11&m1=0&m2=0&type=1'}] },
-    { id:'d3-4', time:'11:30〜', title:'東京駅周辺で過ごす 🏛', desc:'⏰ 12:30頃には新幹線改札へ向かう', type:'normal', links:[] },
-    { id:'d3-6', time:'13:00', title:'東京駅出発 🚄', desc:'🚄 山形新幹線 つばさ139号 山形行\n🕐 13:00発 → 15:50着\n📍 東京駅 → 山形駅\n🪑 16号車 3番D席', type:'train', highlight:true, links:[] },
+    { id:'d3-2', time:'11:00', title:'ホテルチェックアウト 🏨', desc:'東武ホテルレバント東京を出発\n徒歩約3〜5分で錦糸町駅北口へ', type:'normal', links:[{label:'ホテルTEL',url:'tel:0356115511'}] },
+    { id:'d3-3a', time:'11:10頃', title:'錦糸町駅 北口 → 地下ホーム 🚉', desc:'1. JR北口の改札を入る\n2. 青いラインの「総武快速線」の案内に沿って、下りエスカレーターか階段で地下ホームへ\n3. 3番線（東京・品川方面）へ ※4番線は千葉方面\n\n改札からホームまで約5分', type:'normal', links:[] },
+    { id:'d3-3', time:'11:27', title:'錦糸町 → 東京 🚃', desc:'🚉 錦糸町 11:27発（3番線）総武快速 逗子行\n　→ 東京 11:35着（総武地下1番線）8分\n\n予備：11:44発 → 11:52着（総武地下1番線）\n💡 11:44発になっても新幹線には十分間に合う', type:'transit', links:[{label:'Yahoo乗り換え',url:'https://transit.yahoo.co.jp/search/result?from=%E9%8C%A6%E7%B3%B8%E7%94%BA&to=%E6%9D%B1%E4%BA%AC&y=2026&m=11&d=22&hh=11&m1=2&m2=7&type=1'}] },
+    { id:'d3-4', time:'11:35〜11:45', title:'駅弁屋 祭へ移動 🚶', desc:'1. 地下ホームからエスカレーターで上がる\n2. 改札を出ずに1階の「中央通路」へ\n3. 5・6番線と7・8番線の階段の間の「駅弁屋 祭」へ（HANAGATAYAの向かい）', type:'normal', links:[] },
+    { id:'d3-5', time:'11:45〜12:20', title:'駅弁を買う 🍱', desc:'買いたいもの：富山「源」のますとぶり、海鮮美食、ますのいぶしすし\n「ますのすし」は売り切れやすいので先に買う\n混んでいたら近くの「駅弁屋 踊」へ（「祭」の人気上位10種）', type:'normal', links:[] },
+    { id:'d3-5b', time:'12:30', title:'新幹線の乗り換え改札を通る 🎫', desc:'「東北・山形新幹線」の乗り換え改札へ\nお手洗いと飲み物を済ませておく', type:'normal', links:[] },
+    { id:'d3-5c', time:'12:45', title:'ホームで乗車', desc:'発車案内で番線を確認（20〜23番線）', type:'normal', links:[] },
+    { id:'d3-6', time:'13:00', title:'東京駅出発 🚄', desc:'🚄 山形新幹線 つばさ139号 山形行\n🕐 13:00発 → 15:50着\n📍 東京駅 → 山形駅\n🪑 16号車 3番D席\n🍱 車内で駅弁を食べる', type:'train', highlight:true, links:[] },
     { id:'d3-7', time:'15:50', title:'山形駅到着', desc:'🅿️ タイムズ山形駅ビル駐車場で車に乗って帰宅', type:'normal', links:[] },
     { id:'d3-8', time:'16:15頃', title:'自宅到着 🏠', desc:'', type:'normal', links:[] },
   ]
